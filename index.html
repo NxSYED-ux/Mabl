@@ -148,7 +148,7 @@
             const errorElement = document.getElementById('error-message');
 
             if (email === "user@test.com" && password === "Syed123") {
-                window.location.href = "dashboard.html?user=Test+User";
+                window.location.href = "dashboard.html";
             } else {
                 errorElement.classList.remove('hidden');
                 setTimeout(() => errorElement.classList.add('hidden'), 3000);
