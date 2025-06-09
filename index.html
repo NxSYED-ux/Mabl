@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mabl Test Suite | Login</title>
+    <title>Login | Mabl Test Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-page">
@@ -32,6 +32,20 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('login-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorElement = document.getElementById('error-message');
+
+            if (email === "user@test.com" && password === "Syed123") {
+                window.location.href = "dashboard.html?user=Test+User";
+            } else {
+                errorElement.classList.remove('hidden');
+                setTimeout(() => errorElement.classList.add('hidden'), 3000);
+            }
+        });
+    </script>
 </body>
 </html>
