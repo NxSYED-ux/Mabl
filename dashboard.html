@@ -6,8 +6,8 @@
     <title>Dashboard | Mabl Test Project</title>
     <style>
         :root {
-            --primary: #4f46e5;
-            --primary-light: #6366f1;
+            --primary: #4361ee;
+            --primary-light: #4361ee;
             --text: #1f2937;
             --text-light: #6b7280;
             --bg: #f9fafb;
@@ -64,15 +64,23 @@
         }
 
         .logout-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
             background: var(--primary);
             color: white;
             border: none;
-            padding: 8px 16px;
             border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
         }
+
+        .logout-btn svg {
+            vertical-align: middle;
+        }
+
 
         .logout-btn:hover {
             background: var(--primary-light);
